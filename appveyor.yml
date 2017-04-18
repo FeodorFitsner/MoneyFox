@@ -8,7 +8,7 @@ environment:
   JavaSdkDirectory: C:\Program Files (x86)\Java\jdk1.8.0
 
 install:
-#- ps: $blockRdp = $true; iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp-v2.ps1'))
+- ps: $blockRdp = $true; iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))
 - '"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\Tools\VsDevCmd.bat"'
 - ps: |
     $vsixPath = "$($env:USERPROFILE)\sqlite-uwp-3180000.vsix"
